@@ -31,6 +31,12 @@ body {
   overflow-x: hidden;
 }
 
+/* React Icons styling */
+svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 html {
   scroll-behavior: smooth;
 }

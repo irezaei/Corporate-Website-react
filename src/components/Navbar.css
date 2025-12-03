@@ -35,8 +35,10 @@
 .logo-icon {
   font-size: 1.75rem;
   color: var(--primary-color);
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  vertical-align: middle;
+  flex-shrink: 0;
 }
 
 .nav-menu {

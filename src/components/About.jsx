@@ -1,5 +1,5 @@
 import React from 'react'
-import { HiLightBulb, HiTarget, HiUserGroup, HiBolt } from 'react-icons/hi2'
+import { HiLightBulb, HiCursorArrowRays, HiUserGroup, HiBolt } from 'react-icons/hi2'
 import './About.css'
 
 const About = () => {
@@ -10,7 +10,7 @@ const About = () => {
       description: 'ایده‌های خلاقانه و راهکارهای نوین برای حل چالش‌های کسب و کار'
     },
     {
-      icon: HiTarget,
+      icon: HiCursorArrowRays,
       title: 'تمرکز بر نتیجه',
       description: 'هدف ما دستیابی به بهترین نتایج ممکن برای مشتریانمان است'
     },

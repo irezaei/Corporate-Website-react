@@ -123,6 +123,9 @@
   margin-right: 0.5rem;
   font-size: 1.1rem;
   transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
 }
 
 .btn:hover .btn-icon {

@@ -5,7 +5,7 @@ import {
   HiCloud, 
   HiCpuChip, 
   HiShieldCheck, 
-  HiChartBar,
+  HiPresentationChartBar,
   HiArrowRight
 } from 'react-icons/hi2'
 import './Services.css'
@@ -43,7 +43,7 @@ const Services = () => {
       features: ['Security Audit', 'Penetration Testing', 'Compliance', 'Incident Response']
     },
     {
-      icon: HiChartBar,
+      icon: HiPresentationChartBar,
       title: 'مشاوره کسب و کار',
       description: 'مشاوره تخصصی برای بهبود فرآیندها و افزایش بهره‌وری کسب و کار شما',
       features: ['Business Analysis', 'Process Optimization', 'Strategy Planning', 'Digital Transformation']
