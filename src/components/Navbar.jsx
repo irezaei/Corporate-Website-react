@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { HiRocketLaunch } from 'react-icons/hi2'
 import './Navbar.css'
 
 const Navbar = () => {
@@ -25,7 +26,7 @@ const Navbar = () => {
       <div className="container">
         <div className="navbar-content">
           <div className="logo">
-            <span className="logo-icon">🚀</span>
+            <HiRocketLaunch className="logo-icon" />
             <span className="logo-text">شرکت ما</span>
           </div>
           

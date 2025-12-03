@@ -1,4 +1,6 @@
 import React from 'react'
+import { HiRocketLaunch } from 'react-icons/hi2'
+import { FaLinkedin, FaTwitter, FaInstagram, FaTelegram } from 'react-icons/fa'
 import './Footer.css'
 
 const Footer = () => {
@@ -31,7 +33,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-brand">
             <div className="footer-logo">
-              <span className="logo-icon">🚀</span>
+              <HiRocketLaunch className="logo-icon" />
               <span className="logo-text">شرکت ما</span>
             </div>
             <p className="footer-description">
@@ -39,10 +41,10 @@ const Footer = () => {
               به سطح جدیدی از موفقیت برسانیم.
             </p>
             <div className="footer-social">
-              <a href="#" aria-label="LinkedIn">💼</a>
-              <a href="#" aria-label="Twitter">🐦</a>
-              <a href="#" aria-label="Instagram">📷</a>
-              <a href="#" aria-label="Telegram">✈️</a>
+              <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
+              <a href="#" aria-label="Twitter"><FaTwitter /></a>
+              <a href="#" aria-label="Instagram"><FaInstagram /></a>
+              <a href="#" aria-label="Telegram"><FaTelegram /></a>
             </div>
           </div>
 

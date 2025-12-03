@@ -1,4 +1,12 @@
 import React, { useState } from 'react'
+import { 
+  HiEnvelope, 
+  HiPhone, 
+  HiMapPin, 
+  HiGlobeAlt,
+  HiCheckCircle
+} from 'react-icons/hi2'
+import { FaLinkedin, FaTwitter, FaInstagram, FaTelegram } from 'react-icons/fa'
 import './Contact.css'
 
 const Contact = () => {
@@ -38,29 +46,36 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: '📧',
+      icon: HiEnvelope,
       title: 'ایمیل',
       value: 'info@company.com',
       link: 'mailto:info@company.com'
     },
     {
-      icon: '📞',
+      icon: HiPhone,
       title: 'تلفن',
       value: '021-12345678',
       link: 'tel:02112345678'
     },
     {
-      icon: '📍',
+      icon: HiMapPin,
       title: 'آدرس',
       value: 'تهران، خیابان ولیعصر',
       link: null
     },
     {
-      icon: '🌐',
+      icon: HiGlobeAlt,
       title: 'طراحی و توسعه',
       value: 'محمدرضا رضائی - melalweb.com',
       link: 'https://melalweb.com'
     }
+  ]
+
+  const socialLinks = [
+    { icon: FaLinkedin, label: 'LinkedIn', href: '#' },
+    { icon: FaTwitter, label: 'Twitter', href: '#' },
+    { icon: FaInstagram, label: 'Instagram', href: '#' },
+    { icon: FaTelegram, label: 'Telegram', href: '#' }
   ]
 
   return (
@@ -82,28 +97,44 @@ const Contact = () => {
             </p>
 
             <div className="contact-items">
-              {contactInfo.map((item, index) => (
-                <div key={index} className="contact-item">
-                  <div className="contact-item-icon">{item.icon}</div>
-                  <div className="contact-item-content">
-                    <h4>{item.title}</h4>
-                    {item.link ? (
-                      <a href={item.link} target={item.link.startsWith('http') ? '_blank' : undefined} rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}>{item.value}</a>
-                    ) : (
-                      <p>{item.value}</p>
-                    )}
+              {contactInfo.map((item, index) => {
+                const IconComponent = item.icon
+                return (
+                  <div key={index} className="contact-item">
+                    <div className="contact-item-icon-wrapper">
+                      <IconComponent className="contact-item-icon" />
+                    </div>
+                    <div className="contact-item-content">
+                      <h4>{item.title}</h4>
+                      {item.link ? (
+                        <a href={item.link} target={item.link.startsWith('http') ? '_blank' : undefined} rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}>{item.value}</a>
+                      ) : (
+                        <p>{item.value}</p>
+                      )}
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
 
             <div className="social-links">
               <h4>شبکه‌های اجتماعی</h4>
               <div className="social-icons">
-                <a href="#" className="social-icon" aria-label="LinkedIn">💼</a>
-                <a href="#" className="social-icon" aria-label="Twitter">🐦</a>
-                <a href="#" className="social-icon" aria-label="Instagram">📷</a>
-                <a href="#" className="social-icon" aria-label="Telegram">✈️</a>
+                {socialLinks.map((social, index) => {
+                  const IconComponent = social.icon
+                  return (
+                    <a 
+                      key={index}
+                      href={social.href} 
+                      className="social-icon" 
+                      aria-label={social.label}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <IconComponent />
+                    </a>
+                  )
+                })}
               </div>
             </div>
           </div>
@@ -163,7 +194,8 @@ const Contact = () => {
 
               {submitStatus === 'success' && (
                 <div className="form-success">
-                  ✓ پیام شما با موفقیت ارسال شد. به زودی با شما تماس خواهیم گرفت.
+                  <HiCheckCircle className="form-success-icon" />
+                  پیام شما با موفقیت ارسال شد. به زودی با شما تماس خواهیم گرفت.
                 </div>
               )}
 

@@ -33,7 +33,10 @@
 }
 
 .logo-icon {
-  font-size: 2rem;
+  font-size: 1.75rem;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
 }
 
 .nav-menu {
@@ -124,4 +127,6 @@
     transform: rotate(-45deg) translate(7px, -6px);
   }
 }
+
+
 

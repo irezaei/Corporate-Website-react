@@ -1,4 +1,5 @@
 import React from 'react'
+import { HiArrowRight } from 'react-icons/hi2'
 import './Hero.css'
 
 const Hero = () => {
@@ -32,6 +33,7 @@ const Hero = () => {
               }}
             >
               شروع کنید
+              <HiArrowRight className="btn-icon" />
             </a>
             <a 
               href="#about" 
@@ -42,6 +44,7 @@ const Hero = () => {
               }}
             >
               بیشتر بدانید
+              <HiArrowRight className="btn-icon" />
             </a>
           </div>
           

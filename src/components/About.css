@@ -119,9 +119,28 @@
   box-shadow: var(--shadow-xl);
 }
 
+.feature-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+  border-radius: 1rem;
+  border: 2px solid rgba(37, 99, 235, 0.2);
+  transition: var(--transition);
+}
+
+.feature-card:hover .feature-icon-wrapper {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, rgba(16, 185, 129, 0.15) 100%);
+  border-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
 .feature-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: var(--primary-color);
 }
 
 .feature-card h4 {

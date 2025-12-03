@@ -1,25 +1,26 @@
 import React from 'react'
+import { HiLightBulb, HiTarget, HiUserGroup, HiBolt } from 'react-icons/hi2'
 import './About.css'
 
 const About = () => {
   const features = [
     {
-      icon: '💡',
+      icon: HiLightBulb,
       title: 'خلاقیت و نوآوری',
       description: 'ایده‌های خلاقانه و راهکارهای نوین برای حل چالش‌های کسب و کار'
     },
     {
-      icon: '🎯',
+      icon: HiTarget,
       title: 'تمرکز بر نتیجه',
       description: 'هدف ما دستیابی به بهترین نتایج ممکن برای مشتریانمان است'
     },
     {
-      icon: '🤝',
+      icon: HiUserGroup,
       title: 'همکاری مستمر',
       description: 'پشتیبانی و همراهی مداوم در تمام مراحل پروژه'
     },
     {
-      icon: '⚡',
+      icon: HiBolt,
       title: 'عملکرد سریع',
       description: 'ارائه راهکارها و خدمات با بالاترین سرعت و کیفیت'
     }
@@ -68,13 +69,18 @@ const About = () => {
           </div>
 
           <div className="about-features">
-            {features.map((feature, index) => (
-              <div key={index} className="feature-card">
-                <div className="feature-icon">{feature.icon}</div>
-                <h4>{feature.title}</h4>
-                <p>{feature.description}</p>
-              </div>
-            ))}
+            {features.map((feature, index) => {
+              const IconComponent = feature.icon
+              return (
+                <div key={index} className="feature-card">
+                  <div className="feature-icon-wrapper">
+                    <IconComponent className="feature-icon" />
+                  </div>
+                  <h4>{feature.title}</h4>
+                  <p>{feature.description}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>
