@@ -18,6 +18,7 @@ const Navbar = () => {
     { id: 'home', label: 'خانه', href: '#home' },
     { id: 'about', label: 'درباره ما', href: '#about' },
     { id: 'services', label: 'خدمات', href: '#services' },
+    { id: 'blog', label: 'بلاگ', href: '#blog' },
     { id: 'contact', label: 'تماس با ما', href: '#contact' },
   ]
 
