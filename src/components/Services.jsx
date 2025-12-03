@@ -8,9 +8,12 @@ import {
   HiPresentationChartBar,
   HiArrowRight
 } from 'react-icons/hi2'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import './Services.css'
 
 const Services = () => {
+  const [ref, isVisible] = useScrollAnimation({ once: true, threshold: 0.1 })
+
   const services = [
     {
       icon: HiGlobeAlt,
@@ -51,9 +54,9 @@ const Services = () => {
   ]
 
   return (
-    <section id="services" className="services section">
+    <section id="services" className="services section" ref={ref}>
       <div className="container">
-        <div className="section-header">
+        <div className={`section-header ${isVisible ? 'fade-in-up' : ''}`}>
           <h2 className="section-title">خدمات ما</h2>
           <p className="section-subtitle">
             راهکارهای جامع و تخصصی برای تمام نیازهای کسب و کار شما

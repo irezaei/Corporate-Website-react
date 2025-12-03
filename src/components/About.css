@@ -65,9 +65,32 @@
 .value-item {
   padding: 1.5rem;
   background: white;
-  border-radius: 0.5rem;
-  box-shadow: var(--shadow-sm);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-md);
   border-right: 4px solid var(--primary-color);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.value-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 0;
+  background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+  transition: var(--transition);
+}
+
+.value-item:hover {
+  transform: translateX(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.value-item:hover::before {
+  height: 100%;
 }
 
 .value-item strong {
@@ -112,11 +135,32 @@
   box-shadow: var(--shadow-md);
   transition: var(--transition);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: var(--transition);
+}
+
+.feature-card:hover::before {
+  transform: scaleX(1);
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-2xl);
+  border-color: var(--primary-color);
 }
 
 .feature-icon-wrapper {

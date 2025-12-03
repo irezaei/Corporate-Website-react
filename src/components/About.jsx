@@ -1,5 +1,6 @@
 import React from 'react'
 import { HiLightBulb, HiCursorArrowRays, HiUserGroup, HiBolt } from 'react-icons/hi2'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import './About.css'
 
 const About = () => {
@@ -26,10 +27,12 @@ const About = () => {
     }
   ]
 
+  const [ref, isVisible] = useScrollAnimation({ once: true, threshold: 0.1 })
+
   return (
-    <section id="about" className="about section">
+    <section id="about" className="about section" ref={ref}>
       <div className="container">
-        <div className="section-header">
+        <div className={`section-header ${isVisible ? 'fade-in-up' : ''}`}>
           <h2 className="section-title">درباره ما</h2>
           <p className="section-subtitle">
             تیمی متخصص و با تجربه در زمینه ارائه راهکارهای نوین کسب و کار

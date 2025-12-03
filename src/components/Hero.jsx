@@ -1,10 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { HiArrowRight } from 'react-icons/hi2'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import './Hero.css'
 
 const Hero = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [ref, isVisible] = useScrollAnimation({ once: true })
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePosition({
+        x: (e.clientX / window.innerWidth) * 100,
+        y: (e.clientY / window.innerHeight) * 100
+      })
+    }
+
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
+
   return (
-    <section id="home" className="hero">
+    <section id="home" className="hero" ref={ref}>
       <div className="hero-background">
         <div className="gradient-overlay"></div>
         <div className="animated-shapes">
@@ -15,7 +31,7 @@ const Hero = () => {
       </div>
       
       <div className="container">
-        <div className="hero-content fade-in-up">
+        <div className={`hero-content ${isVisible ? 'fade-in-up' : ''}`}>
           <h1 className="hero-title">
             راهکارهای <span className="highlight">نوین</span> برای کسب و کار شما
           </h1>

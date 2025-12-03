@@ -7,9 +7,12 @@ import {
   HiCheckCircle
 } from 'react-icons/hi2'
 import { FaLinkedin, FaTwitter, FaInstagram, FaTelegram } from 'react-icons/fa'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import './Contact.css'
 
 const Contact = () => {
+  const [ref, isVisible] = useScrollAnimation({ once: true, threshold: 0.1 })
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -79,9 +82,9 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="contact section">
+    <section id="contact" className="contact section" ref={ref}>
       <div className="container">
-        <div className="section-header">
+        <div className={`section-header ${isVisible ? 'fade-in-up' : ''}`}>
           <h2 className="section-title">تماس با ما</h2>
           <p className="section-subtitle">
             آماده‌ایم تا به شما کمک کنیم. با ما در تماس باشید.
