@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { HiRocketLaunch } from 'react-icons/hi2'
 import { FaLinkedin, FaTwitter, FaInstagram, FaTelegram } from 'react-icons/fa'
 import './Footer.css'
@@ -32,10 +33,10 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-brand">
-            <div className="footer-logo">
+            <Link to="/" className="footer-logo">
               <HiRocketLaunch className="logo-icon" />
               <span className="logo-text">شرکت ما</span>
-            </div>
+            </Link>
             <p className="footer-description">
               ما با تیمی متخصص و تجربه‌ای غنی، آماده‌ایم تا کسب و کار شما را 
               به سطح جدیدی از موفقیت برسانیم.

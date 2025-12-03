@@ -34,6 +34,13 @@
   font-weight: 700;
   color: var(--primary-color);
   text-decoration: none;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: var(--primary-dark);
+  transform: scale(1.05);
 }
 
 .logo-icon {

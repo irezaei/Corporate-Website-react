@@ -38,6 +38,15 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  text-decoration: none;
+  color: white;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.footer-logo:hover {
+  color: var(--primary-light);
+  transform: scale(1.05);
 }
 
 .footer-logo .logo-icon {
