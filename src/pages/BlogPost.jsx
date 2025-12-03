@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { HiCalendar, HiClock, HiArrowRight, HiArrowLeft } from 'react-icons/hi2'
+import { HiCalendar, HiClock, HiArrowLeft } from 'react-icons/hi2'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import './BlogPost.css'
@@ -467,4 +467,5 @@ const BlogPost = () => {
 }
 
 export default BlogPost
+
 
