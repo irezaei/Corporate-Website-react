@@ -6,7 +6,7 @@ import {
   HiCpuChip, 
   HiShieldCheck, 
   HiPresentationChartBar,
-  HiArrowRight
+  HiArrowLeft
 } from 'react-icons/hi2'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import './Services.css'
@@ -87,7 +87,7 @@ const Services = () => {
                   }}
                 >
                   اطلاعات بیشتر
-                  <HiArrowRight className="service-link-icon" />
+                  <HiArrowLeft className="service-link-icon" />
                 </a>
               </div>
             )

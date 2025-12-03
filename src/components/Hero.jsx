@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { HiArrowRight } from 'react-icons/hi2'
+import { HiArrowLeft } from 'react-icons/hi2'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import './Hero.css'
 
@@ -49,7 +49,7 @@ const Hero = () => {
               }}
             >
               شروع کنید
-              <HiArrowRight className="btn-icon" />
+              <HiArrowLeft className="btn-icon" />
             </a>
             <a 
               href="#about" 
@@ -60,7 +60,7 @@ const Hero = () => {
               }}
             >
               بیشتر بدانید
-              <HiArrowRight className="btn-icon" />
+              <HiArrowLeft className="btn-icon" />
             </a>
           </div>
           
